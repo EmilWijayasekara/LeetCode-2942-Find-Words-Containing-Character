@@ -8,7 +8,7 @@
 - *Problem Number* : 1784
 - *Problem Name* : [Check if Binary String Has at Most One Segment of Ones](https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/description/ "https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/description/")
 - *Problem difficulty* : Easy 🟢
-- *Programming language used* - Java
+- *Programming language used* - Java 17
 
 ## Problem
 
