@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode id=2942 lang=java
- *
- * [2942] Find Words Containing Character
- */
-
-// @lc code=start
 class Solution {
     public List<Integer> findWordsContaining(String[] words, char x) {
         List<Integer> list = new ArrayList<>();
@@ -19,5 +12,3 @@ class Solution {
         return list;
     }
 }
-// @lc code=end
-
