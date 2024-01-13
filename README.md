@@ -1,43 +1,53 @@
 # LeetCode Practice  (Day 21)
 
-## Achievements
-
-[![Leetcode-copy.jpg](https://i.postimg.cc/s2w0PV0q/Leetcode-copy.jpg)](https://postimg.cc/ns9kptxG)
-
 ## About the problem
-- *Problem Number* : 1784
-- *Problem Name* : [Check if Binary String Has at Most One Segment of Ones](https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/description/ "https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/description/")
+- *Problem Number* : 2942
+- *Problem Name* :  [Find Words Containing Character](https://leetcode.com/problems/find-words-containing-character/description/ "https://leetcode.com/problems/find-words-containing-character/description/")
 - *Problem difficulty* : Easy 🟢
-- *Programming language used* - Java 17
+- *Programming language used* - Java
 
 ## Problem
 
 
-Given a binary string  `s`  **​​​​​without leading zeros**, return  `true`​​​  _if_ `s` _contains  **at most one contiguous segment of ones**_. Otherwise, return  `false`.
+You are given a  **0-indexed**  array of strings  `words`  and a character  `x`.
+
+Return  _an  **array of indices**  representing the words that contain the character_ `x`.
+
+**Note**  that the returned array may be in  **any**  order.
 
 **Example 1:**
 
 ```
-Input: s = "1001"
-Output: false
-Explanation: The ones do not form a contiguous segment.
+Input: words = ["leet","code"], x = "e"
+Output: [0,1]
+Explanation: "e" occurs in both words: "leet", and "code". Hence, we return indices 0 and 1.
 ```
 
 **Example 2:**
 
 ```
-Input: s = "110"
-Output: true
+Input: words = ["abc","bcd","aaaa","cbc"], x = "a"
+Output: [0,2]
+Explanation: "a" occurs in "abc", and "aaaa". Hence, we return indices 0 and 2.
+```
+
+**Example 3:**
+
+```
+Input: words = ["abc","bcd","aaaa","cbc"], x = "z"
+Output: []
+Explanation: "z" does not occur in any of the words. Hence, we return an empty array.
 ```
 
 **Constraints:**
 
--   `1 <= s.length <= 100`
--   `s[i]`​​​​ is either  `'0'`  or  `'1'`.
--   `s[0]`  is `'1'`.
+-   `1 <= words.length <= 50`
+-   `1 <= words[i].length <= 50`
+-   `x`  is a lowercase English letter.
+-   `words[i]`  consists only of lowercase English letters.
 
 ## Approach Explanation
 
-Checking whether the binary string contains the substring "01". If this substring is present, it indicates the existence of at least two contiguous segments of ones, and the function returns `false`. Conversely, if the substring is not found, it implies that the ones in the string form a single, unbroken sequence, and the function returns `true`. My approach prioritizes simplicity and readability by utilizing the `contains` method to directly assess the presence of the specified substring, offering a concise solution to the problem.
+I checked if the character at the current position matched the given character 'x'. If a match was found, I added the index of the word to a list and moved on to the next word. My approach aims for simplicity and effectiveness, focusing on a straightforward iteration through the words and characters to identify those containing the specified character. The resulting list captures the indices of words satisfying the condition, providing a clear and concise solution to the problem.
 
 ### If you have suggestions for improvement or would like to contribute to this solution, feel free to create a pull request. 🙌😇
